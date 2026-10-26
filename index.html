@@ -107,7 +107,7 @@
   .rating strong { color: var(--ink); }
 
   .hero-media { position: relative; }
-  .hero-media img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 24px; }
+  .hero-media img { width: 100%; height: auto; aspect-ratio: 4/5; object-fit: cover; object-position: 50% 45%; border-radius: 24px; }
   .hero-note {
     position: absolute; left: -32px; bottom: 40px;
     background: var(--paper); border-radius: 14px; padding: 18px 22px;
@@ -272,8 +272,8 @@
     .hero-grid, .steps-layout, .about-grid, .faq-grid, .offer-card { grid-template-columns: 1fr; }
     .hero-grid { gap: 48px; }
     .hero-media { order: -1; }
-    .hero-media img { aspect-ratio: 4/3; }
-    .hero-note { left: 16px; bottom: 16px; }
+    .hero-media img { aspect-ratio: 1/1; object-position: 50% 50%; }
+    .hero-note { display: none; }
     .t-grid { grid-template-columns: 1fr; }
     .steps-layout, .about-grid, .faq-grid { gap: 48px; }
     .steps-layout .sec-head, .contact { position: static; }
@@ -342,7 +342,10 @@
       </div>
     </div>
     <div class="hero-media">
-      <img src="https://images.unsplash.com/photo-1604762524889-3e2fcc145683?w=1000&q=80" alt="Jiboia exuberante e saudável em um vaso">
+      <picture>
+        <source type="image/webp" srcset="img/jiboia-hero-800.webp 800w, img/jiboia-hero-1200.webp 1200w" sizes="(max-width: 960px) 100vw, 520px">
+        <img src="img/jiboia-hero-1200.jpg" srcset="img/jiboia-hero-800.jpg 800w, img/jiboia-hero-1200.jpg 1200w" sizes="(max-width: 960px) 100vw, 520px" width="1200" height="1500" alt="Jiboia Marble saudável em cachepô de palha na prateleira" fetchpriority="high">
+      </picture>
       <div class="hero-note">
         <b>16 anos</b>
         <span>cultivando e vendendo plantas na Cheiro de Verde</span>
