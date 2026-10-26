@@ -1,11 +1,11 @@
 /*
-  Aviso de cookies (LGPD) — Cheiro de Verde
+  Aviso de cookies (LGPD), Cheiro de Verde
 
   Guarda a escolha do visitante em localStorage ("cdv-consent") e só libera
   ferramentas de análise/marketing depois do consentimento.
 
   Para ativar uma ferramenta, cole o código dela dentro de loadAnalytics() ou
-  loadMarketing() abaixo — NÃO cole direto no <head> da página, senão ela
+  loadMarketing() abaixo. NÃO cole direto no <head> da página, senão ela
   roda antes do consentimento.
 
   Para reabrir as preferências: qualquer elemento com data-cookie-prefs.
@@ -17,7 +17,7 @@
   // ===== Ferramentas condicionadas ao consentimento =====
 
   function loadAnalytics() {
-    // Google Analytics 4 — substitua G-XXXXXXX pelo seu ID e descomente:
+    // Google Analytics 4: substitua G-XXXXXXX pelo seu ID e descomente:
     // loadScript('https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX');
     // window.dataLayer = window.dataLayer || [];
     // window.gtag = function () { dataLayer.push(arguments); };
@@ -26,8 +26,8 @@
   }
 
   function loadMarketing() {
-    // Meta Pixel — cole aqui o código do pixel (sem as tags <script>).
-    // Google Ads — gtag('config', 'AW-XXXXXXX');
+    // Meta Pixel: cole aqui o código do pixel (sem as tags <script>).
+    // Google Ads: gtag('config', 'AW-XXXXXXX');
   }
 
   // ======================================================

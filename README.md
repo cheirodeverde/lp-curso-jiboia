@@ -1,6 +1,6 @@
 # LP Curso Jiboia 7D
 
-Landing page do curso **Método Jiboia 7D** — Cheiro de Verde.
+Landing page do curso **Método Jiboia 7D**, da Cheiro de Verde.
 
 Site estático, sem build: `index.html` (LP), `privacidade.html` (Política de Privacidade), `cookies.js` (aviso de cookies/LGPD) e `img/`. Publicado na Vercel; `vercel.json` ativa URLs limpas (`/privacidade`).
 
