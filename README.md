@@ -2,9 +2,10 @@
 
 Landing page do curso **Método Jiboia 7D** — Cheiro de Verde.
 
-Página estática em um único arquivo: `index.html` (HTML + CSS + JS inline). Basta abrir no navegador ou publicar em qualquer hospedagem estática.
+Site estático, sem build: `index.html` (LP), `privacidade.html` (Política de Privacidade), `cookies.js` (aviso de cookies/LGPD) e `img/`. Publicado na Vercel; `vercel.json` ativa URLs limpas (`/privacidade`).
 
 ## Pendências
 
 - **Vídeo de prévia:** a seção está oculta. Para ativar, troque `SEU_VIDEO_ID` pelo ID do YouTube e remova o atributo `hidden` da seção.
-- **Política de Privacidade:** o link do rodapé aponta para o WordPress antigo (fora do ar).
+- **Razão social:** a Política de Privacidade (`privacidade.html`) usa "Cheiro de Verde"; trocar pela razão social do CNPJ.
+- **Rastreamento:** Google Analytics, Meta Pixel e Google Ads ainda não estão instalados. Os códigos entram em `cookies.js` (funções `loadAnalytics` e `loadMarketing`), para só rodarem depois do consentimento.

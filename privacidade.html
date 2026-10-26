@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Política de Privacidade — Cheiro de Verde</title>
+<meta name="description" content="Como a Cheiro de Verde coleta, usa, compartilha e protege seus dados pessoais, de acordo com a LGPD (Lei 13.709/2018).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #18221b;
+    --ink-soft: #46514a;
+    --muted: #6b746d;
+    --paper: #fffdf8;
+    --cream: #f6f2e9;
+    --line: #e3ddcf;
+    --forest: #1d3524;
+    --moss: #4c7a55;
+
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  body {
+    font-family: var(--sans); font-size: 17px; line-height: 1.7;
+    color: var(--ink); background: var(--paper);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--moss); }
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  nav { border-bottom: 1px solid var(--line); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; text-decoration: none; color: var(--ink); }
+  .brand small { display: block; font-family: var(--sans); font-size: 12px; color: var(--muted); margin-top: -2px; }
+  .back { font-size: 15px; font-weight: 600; text-decoration: none; color: var(--forest); }
+
+  .doc { max-width: 760px; margin: 0 auto; padding: 72px 24px 112px; }
+  .eyebrow { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--moss); margin-bottom: 16px; }
+  h1 { font-family: var(--serif); font-weight: 500; font-size: clamp(2.2rem, 5vw, 3.2rem); line-height: 1.1; margin-bottom: 16px; }
+  .updated { color: var(--muted); font-size: 15px; margin-bottom: 40px; }
+  .intro { font-size: 1.1rem; color: var(--ink-soft); padding-bottom: 40px; border-bottom: 1px solid var(--line); }
+
+  .toc { background: var(--cream); border-radius: 16px; padding: 24px 28px; margin: 40px 0 8px; }
+  .toc b { display: block; margin-bottom: 8px; }
+  .toc ol { padding-left: 20px; columns: 2; column-gap: 32px; font-size: 15px; }
+  .toc li { break-inside: avoid; }
+  .toc a { color: var(--ink-soft); text-decoration: none; }
+  .toc a:hover { color: var(--moss); text-decoration: underline; }
+
+  h2 { font-family: var(--serif); font-weight: 500; font-size: 1.6rem; line-height: 1.25; margin: 56px 0 16px; scroll-margin-top: 24px; }
+  h3 { font-size: 1rem; font-weight: 600; margin: 28px 0 8px; }
+  p { color: var(--ink-soft); margin-bottom: 16px; }
+  ul { padding-left: 22px; margin-bottom: 16px; color: var(--ink-soft); }
+  li { margin-bottom: 8px; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  .table-wrap { overflow-x: auto; margin: 16px 0 24px; border: 1px solid var(--line); border-radius: 12px; }
+  table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 520px; }
+  th, td { text-align: left; vertical-align: top; padding: 14px 16px; border-bottom: 1px solid var(--line); }
+  th { background: var(--cream); font-weight: 600; }
+  tr:last-child td { border-bottom: 0; }
+  td { color: var(--ink-soft); }
+
+  .contact-box { background: var(--cream); border-radius: 16px; padding: 24px 28px; margin: 16px 0; }
+  .contact-box p { margin-bottom: 4px; }
+
+  .prefs-btn {
+    font: 600 15px var(--sans); color: #fff; background: var(--forest);
+    border: 0; border-radius: 10px; padding: 12px 20px; cursor: pointer; margin: 8px 0 16px;
+  }
+
+  .site-footer { background: var(--forest); color: #b8c7b9; font-size: 14px; padding: 40px 0; }
+  .site-footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .site-footer a { color: #dfe7de; }
+  .site-footer button { font: inherit; color: #dfe7de; background: none; border: 0; text-decoration: underline; cursor: pointer; }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 0 16px; }
+    .doc { padding: 48px 16px 80px; }
+    .toc ol { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="/" class="brand">Cheiro de Verde<small>Loja e escola de plantas desde 2010</small></a>
+    <a href="/" class="back">← Voltar</a>
+  </div>
+</nav>
+
+<main class="doc">
+  <p class="eyebrow">LGPD · Lei 13.709/2018</p>
+  <h1>Política de Privacidade</h1>
+  <p class="updated">Última atualização: 26 de outubro de 2026</p>
+
+  <p class="intro">A Cheiro de Verde respeita a sua privacidade. Esta política explica, de forma simples, quais dados pessoais coletamos quando você visita esta página, compra o Método Jiboia 7D ou fala com a gente, para que usamos esses dados, com quem os compartilhamos e como você pode exercer seus direitos previstos na Lei Geral de Proteção de Dados (LGPD).</p>
+
+  <nav class="toc" aria-label="Sumário">
+    <b>Nesta página</b>
+    <ol>
+      <li><a href="#controlador">Quem somos</a></li>
+      <li><a href="#dados">Dados que coletamos</a></li>
+      <li><a href="#finalidades">Para que usamos</a></li>
+      <li><a href="#cookies">Cookies</a></li>
+      <li><a href="#compartilhamento">Compartilhamento</a></li>
+      <li><a href="#internacional">Transferência internacional</a></li>
+      <li><a href="#retencao">Por quanto tempo guardamos</a></li>
+      <li><a href="#direitos">Seus direitos</a></li>
+      <li><a href="#seguranca">Segurança</a></li>
+      <li><a href="#menores">Menores de idade</a></li>
+      <li><a href="#alteracoes">Alterações</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="controlador">1. Quem somos</h2>
+  <p>O controlador dos seus dados pessoais é a <strong>Cheiro de Verde</strong>, inscrita no CNPJ sob o nº <strong>42.120.315/0001-12</strong>, com sede em <strong>Americana/SP</strong>, responsável pela loja e escola de plantas Cheiro de Verde e pelo curso Método Jiboia 7D.</p>
+  <p>A encarregada pelo tratamento de dados pessoais (DPO) é <strong>Thaís Leles Advincula</strong>, que pode ser contatada pelo e-mail <a href="mailto:contato@cheirodeverde.com">contato@cheirodeverde.com</a>.</p>
+
+  <h2 id="dados">2. Dados que coletamos</h2>
+  <h3>Dados que você nos fornece</h3>
+  <ul>
+    <li><strong>Na compra do curso:</strong> nome, e-mail, CPF, telefone e endereço de cobrança. A compra é processada pela <strong>Hotmart</strong>; os dados do cartão de crédito ou de outro meio de pagamento são tratados diretamente por ela e <strong>não chegam até nós</strong>.</li>
+    <li><strong>No WhatsApp:</strong> nome, número de telefone e o conteúdo das mensagens que você nos envia.</li>
+    <li><strong>Por e-mail:</strong> nome, endereço de e-mail e o conteúdo da sua mensagem.</li>
+    <li><strong>Na Comunidade Jiboia 7D (grupo no Facebook):</strong> nome e informações públicas do seu perfil, além do que você publicar no grupo, como textos, fotos e comentários.</li>
+  </ul>
+  <h3>Dados coletados automaticamente</h3>
+  <ul>
+    <li><strong>Dados de navegação:</strong> endereço IP, tipo de navegador e dispositivo, páginas visitadas, data e hora de acesso e origem da visita (por exemplo, o anúncio ou link que trouxe você até aqui).</li>
+    <li>Parte desses dados é coletada por cookies e tecnologias semelhantes de análise e marketing, que <strong>só são ativados com o seu consentimento</strong>. Veja a seção <a href="#cookies">Cookies</a>.</li>
+  </ul>
+  <p>Não coletamos dados pessoais sensíveis (como origem racial, saúde, religião ou opinião política).</p>
+
+  <h2 id="finalidades">3. Para que usamos seus dados</h2>
+  <p>Só tratamos dados pessoais com uma finalidade definida e uma base legal prevista no art. 7º da LGPD:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Finalidade</th><th>Base legal (LGPD)</th></tr></thead>
+      <tbody>
+        <tr><td>Liberar o acesso ao curso, aos materiais e à comunidade</td><td>Execução de contrato (art. 7º, V)</td></tr>
+        <tr><td>Prestar suporte por e-mail e WhatsApp</td><td>Execução de contrato (art. 7º, V)</td></tr>
+        <tr><td>Enviar e administrar o crédito (cashback) na loja</td><td>Execução de contrato (art. 7º, V)</td></tr>
+        <tr><td>Processar pagamentos, reembolsos e garantia de 7 dias</td><td>Execução de contrato (art. 7º, V)</td></tr>
+        <tr><td>Emitir notas fiscais e cumprir obrigações fiscais e legais</td><td>Cumprimento de obrigação legal (art. 7º, II)</td></tr>
+        <tr><td>Guardar registros de acesso à página, conforme o Marco Civil da Internet</td><td>Cumprimento de obrigação legal (art. 7º, II)</td></tr>
+        <tr><td>Enviar e-mails sobre o curso, atualizações e conteúdos relacionados para quem já é aluno</td><td>Legítimo interesse (art. 7º, IX) — você pode cancelar a qualquer momento</td></tr>
+        <tr><td>Enviar ofertas e novidades da loja e da escola</td><td>Consentimento (art. 7º, I)</td></tr>
+        <tr><td>Medir audiência e melhorar a página (Google Analytics)</td><td>Consentimento (art. 7º, I)</td></tr>
+        <tr><td>Medir e personalizar anúncios (Meta Pixel, Google Ads)</td><td>Consentimento (art. 7º, I)</td></tr>
+        <tr><td>Prevenir fraudes e defender direitos em processos</td><td>Exercício regular de direitos (art. 7º, VI) e legítimo interesse (art. 7º, IX)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Não vendemos nem alugamos seus dados pessoais.</p>
+
+  <h2 id="cookies">4. Cookies</h2>
+  <p>Cookies são pequenos arquivos guardados no seu navegador. Nesta página eles são divididos em três categorias:</p>
+  <div class="table-wrap">
+    <table>
+      <thead><tr><th>Categoria</th><th>Para que serve</th><th>Ferramentas</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Necessários</strong></td><td>Guardar a sua escolha sobre cookies. Não podem ser desativados.</td><td>Cheiro de Verde</td></tr>
+        <tr><td><strong>Análise</strong></td><td>Contar visitas e entender quais partes da página são mais acessadas, de forma agregada.</td><td>Google Analytics, Google Tag Manager</td></tr>
+        <tr><td><strong>Marketing</strong></td><td>Medir o resultado dos anúncios e mostrar anúncios mais relevantes em outras plataformas.</td><td>Meta Pixel (Facebook/Instagram), Google Ads</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>Na primeira visita, mostramos um aviso para você aceitar, recusar ou escolher categorias. Cookies de análise e de marketing <strong>só são ativados depois do seu consentimento</strong>, e você pode mudar sua escolha quando quiser:</p>
+  <button type="button" class="prefs-btn" data-cookie-prefs>Alterar preferências de cookies</button>
+  <p>Você também pode apagar ou bloquear cookies nas configurações do seu navegador. Bloquear cookies necessários pode fazer o aviso aparecer novamente a cada visita.</p>
+
+  <h2 id="compartilhamento">5. Com quem compartilhamos</h2>
+  <p>Compartilhamos dados apenas com parceiros necessários para entregar o curso e operar a página, sempre na medida do necessário:</p>
+  <ul>
+    <li><strong>Hotmart:</strong> processamento de pagamentos, emissão de comprovantes e área de membros do curso.</li>
+    <li><strong>Meta (Facebook, Instagram e WhatsApp):</strong> comunidade no Facebook, atendimento por WhatsApp e, com seu consentimento, Meta Pixel.</li>
+    <li><strong>Google:</strong> com seu consentimento, Google Analytics, Google Tag Manager e Google Ads.</li>
+    <li><strong>Provedor de e-mail:</strong> envio de e-mails de acesso, suporte, cashback e comunicações.</li>
+    <li><strong>Vercel:</strong> hospedagem desta página.</li>
+    <li><strong>Autoridades públicas:</strong> quando houver obrigação legal, ordem judicial ou requisição de autoridade competente.</li>
+  </ul>
+  <p>Cada um desses parceiros também é responsável pelos dados que trata e tem a sua própria política de privacidade. Na comunidade do Facebook, o que você publica fica visível para os demais membros do grupo e está sujeito também às regras da Meta.</p>
+
+  <h2 id="internacional">6. Transferência internacional</h2>
+  <p>Alguns parceiros (como Meta, Google e Vercel) podem armazenar dados em servidores fora do Brasil. Nesses casos, a transferência ocorre conforme o art. 33 da LGPD, com parceiros que adotam garantias de proteção de dados, como cláusulas contratuais e padrões de segurança reconhecidos internacionalmente.</p>
+
+  <h2 id="retencao">7. Por quanto tempo guardamos</h2>
+  <ul>
+    <li><strong>Dados de compra e de aluno:</strong> enquanto você tiver acesso ao curso e, depois, pelo prazo necessário para cumprir obrigações legais e fiscais (em regra, 5 anos).</li>
+    <li><strong>Registros de acesso à página:</strong> 6 meses, conforme o art. 15 do Marco Civil da Internet (Lei 12.965/2014).</li>
+    <li><strong>Mensagens de atendimento:</strong> pelo tempo necessário para resolver sua solicitação e manter o histórico do suporte.</li>
+    <li><strong>Dados tratados com base no consentimento:</strong> até você revogar o consentimento.</li>
+  </ul>
+  <p>Terminado o prazo, os dados são eliminados ou anonimizados, salvo quando a lei permitir ou exigir a sua guarda (art. 16 da LGPD).</p>
+
+  <h2 id="direitos">8. Seus direitos</h2>
+  <p>Pelo art. 18 da LGPD, você pode, a qualquer momento e gratuitamente:</p>
+  <ul>
+    <li>confirmar se tratamos seus dados e acessá-los;</li>
+    <li>corrigir dados incompletos, inexatos ou desatualizados;</li>
+    <li>pedir a anonimização, o bloqueio ou a eliminação de dados desnecessários, excessivos ou tratados em desacordo com a lei;</li>
+    <li>pedir a portabilidade dos seus dados a outro fornecedor;</li>
+    <li>pedir a eliminação dos dados tratados com base no seu consentimento;</li>
+    <li>saber com quais entidades compartilhamos seus dados;</li>
+    <li>ser informado sobre a possibilidade de não dar consentimento e suas consequências;</li>
+    <li>revogar o consentimento;</li>
+    <li>se opor a tratamentos feitos com base em outras hipóteses legais, quando houver descumprimento da LGPD.</li>
+  </ul>
+  <p>Para exercer qualquer um desses direitos, envie um e-mail para <a href="mailto:contato@cheirodeverde.com">contato@cheirodeverde.com</a>. Podemos pedir informações para confirmar a sua identidade antes de atender ao pedido. Respondemos em até 15 dias.</p>
+  <p>Se entender que seus direitos não foram atendidos, você também pode apresentar reclamação à <strong>Autoridade Nacional de Proteção de Dados (ANPD)</strong>, em <a href="https://www.gov.br/anpd" target="_blank" rel="noopener">gov.br/anpd</a>.</p>
+
+  <h2 id="seguranca">9. Segurança</h2>
+  <p>Adotamos medidas técnicas e administrativas para proteger seus dados contra acessos não autorizados, perda ou alteração, como conexão criptografada (HTTPS), acesso restrito às pessoas que precisam dos dados para trabalhar e uso de parceiros com padrões reconhecidos de segurança. Nenhum sistema é 100% seguro; se ocorrer um incidente que possa causar risco ou dano relevante, comunicaremos você e a ANPD, conforme o art. 48 da LGPD.</p>
+
+  <h2 id="menores">10. Menores de idade</h2>
+  <p>O curso é destinado a maiores de 18 anos. Não coletamos intencionalmente dados de crianças e adolescentes. Se você acreditar que recebemos dados de um menor sem o consentimento do responsável, fale com a gente para que eles sejam eliminados.</p>
+
+  <h2 id="alteracoes">11. Alterações nesta política</h2>
+  <p>Podemos atualizar esta política para refletir mudanças nas nossas atividades ou na lei. A data da última atualização fica sempre no topo da página. Se houver mudanças relevantes, avisaremos pelos nossos canais de contato.</p>
+
+  <h2 id="contato">12. Contato</h2>
+  <div class="contact-box">
+    <p><strong>Cheiro de Verde</strong> · CNPJ 42.120.315/0001-12 · Americana/SP</p>
+    <p>Encarregada de dados (DPO): <strong>Thaís Leles Advincula</strong></p>
+    <p>E-mail: <a href="mailto:contato@cheirodeverde.com">contato@cheirodeverde.com</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Cheiro de Verde · Loja e escola de plantas desde 2010 · CNPJ 42.120.315/0001-12</p>
+    <p>© 2026 · <button type="button" data-cookie-prefs>Preferências de cookies</button></p>
+  </div>
+</footer>
+
+<script src="cookies.js"></script>
+</body>
+</html>

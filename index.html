@@ -245,6 +245,7 @@
   .site-footer { background: var(--forest); color: #b8c7b9; font-size: 14px; padding: 40px 0; }
   .site-footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .site-footer a { color: #dfe7de; }
+  .site-footer button { font: inherit; color: #dfe7de; background: none; border: 0; text-decoration: underline; cursor: pointer; }
 
   /* Barra fixa mobile */
   .mobile-bar {
@@ -671,7 +672,7 @@
 <footer class="site-footer">
   <div class="wrap">
     <p>Cheiro de Verde · Loja e escola de plantas desde 2010 · CNPJ 42.120.315/0001-12</p>
-    <p>© 2026 · <a href="https://escolacheirodeverde.com.br/privacy-policy/">Política de Privacidade</a></p>
+    <p>© 2026 · <a href="/privacidade">Política de Privacidade</a> · <button type="button" data-cookie-prefs>Preferências de cookies</button></p>
   </div>
 </footer>
 
@@ -704,5 +705,6 @@
     document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
   }
 </script>
+<script src="cookies.js"></script>
 </body>
 </html>
