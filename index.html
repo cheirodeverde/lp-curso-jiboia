@@ -230,7 +230,7 @@
 
   .contact { background: var(--cream); border-radius: var(--radius); padding: 32px; position: sticky; top: 120px; }
   .contact-who { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
-  .contact-who img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; object-position: top; }
+  .contact-who img { display: block; width: 56px; height: 56px; border-radius: 50%; object-fit: cover; }
   .contact-who b { display: block; font-weight: 600; }
   .contact-who span { font-size: 14px; color: var(--muted); }
   .contact p { font-size: 16px; color: var(--ink-soft); margin-bottom: 24px; }
@@ -651,7 +651,7 @@
 
     <aside class="contact reveal">
       <div class="contact-who">
-        <img src="https://escolacheirodeverde.com.br/wp-content/uploads/2025/10/1-240x300.png" alt="Thaís, engenheira agrônoma">
+        <picture><source type="image/webp" srcset="img/thais-avatar.webp"><img src="img/thais-avatar.jpg" width="56" height="56" loading="lazy" alt="Thaís, engenheira agrônoma"></picture>
         <div><b>Thaís</b><span>Eng. agrônoma · criadora do método</span></div>
       </div>
       <p>Ficou com alguma dúvida? Fale direto comigo pelo WhatsApp — sem robô e sem atendente genérico.</p>
