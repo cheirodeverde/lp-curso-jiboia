@@ -7,4 +7,4 @@ Página estática em um único arquivo: `index.html` (HTML + CSS + JS inline). B
 ## Pendências
 
 - **Vídeo de prévia:** a seção está oculta. Para ativar, troque `SEU_VIDEO_ID` pelo ID do YouTube e remova o atributo `hidden` da seção.
-- **Fotos da Thaís e do Fábio:** ainda carregam do WordPress antigo (fora do ar); colocar em `img/`.
+- **Foto da Thaís no card do WhatsApp:** ainda carrega do WordPress antigo (fora do ar); colocar em `img/`.
