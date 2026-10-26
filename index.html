@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método Jiboia 7D — Cheiro de Verde</title>
+<meta name="description" content="O sistema de 7 passos para deixar sua jiboia cheia, verde e saudável com 5 minutos por semana. Criado por engenheiros agrônomos da Cheiro de Verde.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --ink: #18221b;
+    --ink-soft: #46514a;
+    --muted: #6b746d;
+    --paper: #fffdf8;
+    --cream: #f6f2e9;
+    --line: #e3ddcf;
+    --forest: #1d3524;
+    --forest-2: #284733;
+    --moss: #4c7a55;
+    --moss-light: #dfe9dc;
+    --gold: #b38a32;
+    --gold-soft: #f3e8cc;
+    --danger: #a5483b;
+
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, -apple-system, sans-serif;
+
+    --radius: 16px;
+    --wrap: 1120px;
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans); font-size: 17px; line-height: 1.65;
+    color: var(--ink); background: var(--paper);
+    -webkit-font-smoothing: antialiased; overflow-x: hidden;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+
+  .wrap { max-width: var(--wrap); margin: 0 auto; padding: 0 24px; }
+  section { padding: 112px 0; }
+
+  /* Tipografia */
+  .eyebrow {
+    font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--moss); margin-bottom: 16px;
+  }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 500; color: var(--ink); letter-spacing: -0.01em; }
+  h1 { font-size: clamp(2.4rem, 5vw, 4rem); line-height: 1.05; }
+  h2 { font-size: clamp(2rem, 3.6vw, 2.9rem); line-height: 1.12; }
+  h3 { font-size: 1.3rem; line-height: 1.3; }
+  h1 em, h2 em { font-style: italic; color: var(--moss); }
+  .lead { font-size: 1.15rem; color: var(--ink-soft); max-width: 34em; }
+  .sec-head { max-width: 640px; margin-bottom: 56px; }
+  .sec-head .lead { margin-top: 16px; }
+
+  /* Botões */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    background: var(--forest); color: #fff; text-decoration: none;
+    font-weight: 600; font-size: 16px; padding: 18px 30px; border-radius: 12px;
+    transition: background .2s;
+  }
+  .btn:hover { background: var(--forest-2); }
+  .btn svg { width: 18px; height: 18px; }
+  .btn-block { width: 100%; }
+
+  .icon { width: 20px; height: 20px; flex-shrink: 0; }
+
+  /* NAV */
+  nav {
+    position: fixed; inset: 0 0 auto 0; z-index: 50;
+    background: rgba(255,253,248,0.9); backdrop-filter: blur(12px);
+    border-bottom: 1px solid transparent; transition: border-color .2s;
+  }
+  nav.scrolled { border-color: var(--line); }
+  .nav-inner { display: flex; align-items: center; justify-content: space-between; height: 72px; }
+  .brand { font-family: var(--serif); font-size: 1.25rem; font-weight: 500; text-decoration: none; }
+  .brand small { display: block; font-family: var(--sans); font-size: 12px; color: var(--muted); letter-spacing: 0.02em; margin-top: -2px; }
+  .nav-cta {
+    font-size: 15px; font-weight: 600; text-decoration: none; color: var(--forest);
+    border: 1.5px solid var(--forest); padding: 10px 20px; border-radius: 10px; transition: all .2s;
+  }
+  .nav-cta:hover { background: var(--forest); color: #fff; }
+
+  /* HERO */
+  .hero { padding: 152px 0 96px; }
+  .hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: 72px; align-items: center; }
+  .hero h1 { margin-bottom: 24px; }
+  .hero .lead { margin-bottom: 36px; }
+  .hero-cta { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .hero-price { font-size: 15px; color: var(--muted); line-height: 1.4; }
+  .hero-price strong { display: block; font-size: 20px; color: var(--ink); font-weight: 600; }
+  .trust { display: flex; flex-wrap: wrap; gap: 8px 24px; margin-top: 32px; font-size: 15px; color: var(--ink-soft); }
+  .trust span { display: inline-flex; align-items: center; gap: 8px; }
+  .trust .icon { width: 18px; height: 18px; color: var(--moss); }
+
+  .rating { display: flex; align-items: center; gap: 14px; margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--line); }
+  .stars { display: flex; gap: 2px; color: var(--gold); }
+  .stars svg { width: 18px; height: 18px; }
+  .rating p { font-size: 15px; color: var(--ink-soft); line-height: 1.4; }
+  .rating strong { color: var(--ink); }
+
+  .hero-media { position: relative; }
+  .hero-media img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 24px; }
+  .hero-note {
+    position: absolute; left: -32px; bottom: 40px;
+    background: var(--paper); border-radius: 14px; padding: 18px 22px;
+    box-shadow: 0 20px 50px rgba(24,34,27,0.14); max-width: 250px;
+  }
+  .hero-note b { display: block; font-family: var(--serif); font-size: 2rem; font-weight: 500; line-height: 1; margin-bottom: 6px; }
+  .hero-note span { font-size: 14px; color: var(--ink-soft); line-height: 1.4; display: block; }
+
+  /* DEPOIMENTOS */
+  .testimonials { background: var(--cream); }
+  .t-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .t-card { background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius); padding: 32px; display: flex; flex-direction: column; }
+  .t-card .stars { margin-bottom: 20px; }
+  .t-card blockquote { font-family: var(--serif); font-size: 1.15rem; line-height: 1.55; color: var(--ink); flex: 1; }
+  .t-card footer { margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 15px; }
+  .t-card footer strong { display: block; font-weight: 600; }
+  .t-card footer span { color: var(--muted); font-size: 14px; }
+
+  /* PROBLEMA x SOLUÇÃO */
+  .compare { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; }
+  .compare > div { padding: 40px; }
+  .compare > div + div { border-left: 1px solid var(--line); background: var(--moss-light); border-color: #cbdac7; }
+  .compare h3 { font-size: 1.1rem; margin-bottom: 24px; font-family: var(--sans); font-weight: 600; letter-spacing: 0.01em; }
+  .check-list { list-style: none; display: grid; gap: 16px; }
+  .check-list li { display: flex; gap: 12px; align-items: flex-start; color: var(--ink-soft); }
+  .check-list .icon { margin-top: 3px; }
+  .is-no .icon { color: var(--danger); }
+  .is-yes .icon { color: var(--moss); }
+
+  /* PARA QUEM É */
+  .fit { background: var(--cream); }
+  .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+  .fit-grid h3 { padding-bottom: 16px; margin-bottom: 24px; border-bottom: 1px solid var(--line); }
+
+  /* PASSOS */
+  .steps-layout { display: grid; grid-template-columns: 0.8fr 1.2fr; gap: 80px; align-items: start; }
+  .steps-layout .sec-head { position: sticky; top: 120px; margin-bottom: 0; }
+  .steps-layout .sec-head .btn { margin-top: 32px; }
+  .steps { list-style: none; }
+  .step { display: grid; grid-template-columns: 64px 1fr; gap: 8px 24px; padding: 32px 0; border-top: 1px solid var(--line); }
+  .step:last-child { border-bottom: 1px solid var(--line); }
+  .step-n { font-family: var(--serif); font-size: 1.6rem; color: var(--moss); line-height: 1.2; }
+  .step h3 { margin-bottom: 4px; }
+  .step-result { font-size: 14px; font-weight: 600; color: var(--moss); margin-bottom: 10px; }
+  .step p { color: var(--ink-soft); }
+  .step.bonus .step-n, .step.bonus .step-result { color: var(--gold); }
+
+  /* SOBRE */
+  .about { background: var(--forest); color: #e9efe8; }
+  .about-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 80px; align-items: center; }
+  .about-photo { border-radius: 20px; overflow: hidden; aspect-ratio: 4/5; background: var(--forest-2); }
+  .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .about-photo-cap { margin-top: 16px; font-size: 14px; color: #b8c7b9; }
+  .about .eyebrow { color: #a9c7a8; }
+  .about h2 { color: #fff; margin-bottom: 28px; }
+  .about h2 em { color: #bcd8b9; }
+  .about p { color: #cfdbcf; margin-bottom: 20px; }
+  .creds { display: grid; grid-template-columns: 1fr 1fr; gap: 0 32px; margin-top: 36px; }
+  .creds div { padding: 16px 0; border-top: 1px solid rgba(255,255,255,0.14); }
+  .creds b { display: block; font-family: var(--serif); font-size: 1.6rem; font-weight: 500; color: #fff; line-height: 1.2; }
+  .creds span { font-size: 14px; color: #b8c7b9; }
+
+  /* OFERTA */
+  .offer { background: var(--cream); }
+  .offer .sec-head { margin: 0 auto 56px; text-align: center; }
+  .offer .sec-head .lead { margin-left: auto; margin-right: auto; }
+  .offer-card {
+    display: grid; grid-template-columns: 1.15fr 0.85fr; background: var(--paper);
+    border: 1px solid var(--line); border-radius: 24px; overflow: hidden;
+    box-shadow: 0 30px 80px rgba(24,34,27,0.08);
+  }
+  .includes { padding: 48px; }
+  .includes h3 { font-family: var(--sans); font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+  .inc-list { list-style: none; }
+  .inc-list li { display: flex; justify-content: space-between; gap: 24px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+  .inc-list li:last-child { border-bottom: 0; }
+  .inc-list .inc-name { display: flex; gap: 12px; }
+  .inc-list .icon { color: var(--moss); margin-top: 3px; }
+  .inc-list b { display: block; font-weight: 600; }
+  .inc-list small { display: block; font-size: 14px; color: var(--muted); line-height: 1.5; margin-top: 2px; }
+  .inc-list .val { font-size: 14px; color: var(--muted); white-space: nowrap; }
+
+  .price { background: var(--forest); color: #fff; padding: 48px; display: flex; flex-direction: column; justify-content: center; }
+  .price-from { font-size: 15px; color: #b8c7b9; }
+  .price-from s { color: #b8c7b9; }
+  .price-big { display: flex; align-items: flex-start; gap: 4px; margin: 4px 0 4px; font-family: var(--serif); }
+  .price-big .cur { font-size: 1.4rem; margin-top: 14px; color: #cfdbcf; }
+  .price-big .num { font-size: 5rem; line-height: 1; font-weight: 500; }
+  .price-big .dec { font-size: 1.8rem; margin-top: 10px; }
+  .price-sub { font-size: 15px; color: #cfdbcf; margin-bottom: 28px; }
+  .price .btn { background: var(--gold); color: #1d1606; }
+  .price .btn:hover { background: #c79c3f; }
+  .cashback { margin-top: 24px; padding: 16px; border-radius: 12px; background: rgba(255,255,255,0.07); font-size: 14px; color: #dfe7de; line-height: 1.5; }
+  .cashback b { color: var(--gold-soft); }
+
+  .guarantee { display: flex; gap: 24px; align-items: center; max-width: 760px; margin: 48px auto 0; }
+  .seal {
+    width: 88px; height: 88px; flex-shrink: 0; border-radius: 50%;
+    border: 1.5px solid var(--moss); color: var(--moss);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+  }
+  .seal b { font-family: var(--serif); font-size: 1.9rem; font-weight: 500; line-height: 1; }
+  .seal span { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+  .guarantee h3 { font-size: 1.2rem; margin-bottom: 4px; }
+  .guarantee p { color: var(--ink-soft); font-size: 16px; }
+
+  /* FAQ + CONTATO */
+  .faq-grid { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: 64px; align-items: start; }
+  details { border-bottom: 1px solid var(--line); }
+  details:first-of-type { border-top: 1px solid var(--line); }
+  summary {
+    list-style: none; cursor: pointer; padding: 24px 0;
+    display: flex; justify-content: space-between; gap: 24px; align-items: center;
+    font-weight: 600; font-size: 17px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary .icon { color: var(--moss); transition: transform .2s; }
+  details[open] summary .icon { transform: rotate(45deg); }
+  details p { padding: 0 48px 24px 0; color: var(--ink-soft); }
+
+  .contact { background: var(--cream); border-radius: var(--radius); padding: 32px; position: sticky; top: 120px; }
+  .contact-who { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+  .contact-who img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; object-position: top; }
+  .contact-who b { display: block; font-weight: 600; }
+  .contact-who span { font-size: 14px; color: var(--muted); }
+  .contact p { font-size: 16px; color: var(--ink-soft); margin-bottom: 24px; }
+  .btn-wa { background: #1f9d55; width: 100%; font-size: 15px; padding: 16px 20px; }
+  .btn-wa:hover { background: #198a4a; }
+
+  /* FECHAMENTO */
+  .final { text-align: center; padding: 96px 0; border-top: 1px solid var(--line); }
+  .final h2 { max-width: 16em; margin: 0 auto 32px; }
+
+  /* FOOTER */
+  .site-footer { background: var(--forest); color: #b8c7b9; font-size: 14px; padding: 40px 0; }
+  .site-footer .wrap { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  .site-footer a { color: #dfe7de; }
+
+  /* Barra fixa mobile */
+  .mobile-bar {
+    display: none; position: fixed; inset: auto 0 0 0; z-index: 60;
+    background: var(--paper); border-top: 1px solid var(--line);
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    align-items: center; justify-content: space-between; gap: 12px;
+    transform: translateY(100%); transition: transform .25s;
+  }
+  .mobile-bar.show { transform: none; }
+  .mobile-bar b { display: block; font-family: var(--serif); font-size: 1.3rem; font-weight: 500; line-height: 1.1; }
+  .mobile-bar span { font-size: 13px; color: var(--muted); }
+  .mobile-bar .btn { padding: 14px 20px; font-size: 15px; }
+
+  /* Entrada suave */
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+  }
+
+  /* RESPONSIVO */
+  @media (max-width: 960px) {
+    section { padding: 80px 0; }
+    .hero { padding: 112px 0 72px; }
+    .hero-grid, .steps-layout, .about-grid, .faq-grid, .offer-card { grid-template-columns: 1fr; }
+    .hero-grid { gap: 48px; }
+    .hero-media { order: -1; }
+    .hero-media img { aspect-ratio: 4/3; }
+    .hero-note { left: 16px; bottom: 16px; }
+    .t-grid { grid-template-columns: 1fr; }
+    .steps-layout, .about-grid, .faq-grid { gap: 48px; }
+    .steps-layout .sec-head, .contact { position: static; }
+    .about-photo { aspect-ratio: 4/3; }
+    .mobile-bar { display: flex; }
+    body { padding-bottom: 80px; }
+  }
+  @media (max-width: 720px) {
+    .wrap { padding: 0 16px; }
+    .nav-cta { display: none; }
+    .compare, .fit-grid { grid-template-columns: 1fr; }
+    .compare > div { padding: 28px 24px; }
+    .compare > div + div { border-left: 0; border-top: 1px solid #cbdac7; }
+    .fit-grid { gap: 48px; }
+    .includes, .price { padding: 32px 24px; }
+    .inc-list li { flex-direction: column; gap: 4px; }
+    .inc-list .val { padding-left: 32px; }
+    .creds { grid-template-columns: 1fr; }
+    .guarantee { flex-direction: column; text-align: center; }
+    details p { padding-right: 0; }
+    .hero-cta .btn { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Ícones (SVG reutilizáveis) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24" fill="currentColor"><path d="m12 2 3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol>
+</svg>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="wrap nav-inner">
+    <a href="#" class="brand">Cheiro de Verde<small>Loja e escola de plantas desde 2010</small></a>
+    <a href="#oferta" class="nav-cta">Garantir acesso</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Método Jiboia 7D</p>
+      <h1>Sua jiboia cheia, verde e <em>saudável</em> — com 5 minutos por semana.</h1>
+      <p class="lead">O passo a passo criado por engenheiros agrônomos para você parar de adivinhar rega, luz e adubação. Tudo na ordem certa, sem precisar pesquisar no Google.</p>
+      <div class="hero-cta">
+        <a href="https://pay.hotmart.com/C102656253U" class="btn">Quero começar agora <svg><use href="#i-arrow"/></svg></a>
+        <p class="hero-price"><strong>R$ 47,90</strong>pagamento único</p>
+      </div>
+      <div class="trust">
+        <span><svg class="icon"><use href="#i-check"/></svg>Acesso imediato e vitalício</span>
+        <span><svg class="icon"><use href="#i-check"/></svg>Garantia de 7 dias</span>
+        <span><svg class="icon"><use href="#i-check"/></svg>Para iniciantes</span>
+      </div>
+      <div class="rating">
+        <div class="stars" aria-label="5 estrelas">
+          <svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg>
+        </div>
+        <p><strong>Nota 5,0</strong> · mais de 500 jiboias recuperadas por alunos</p>
+      </div>
+    </div>
+    <div class="hero-media">
+      <img src="https://images.unsplash.com/photo-1604762524889-3e2fcc145683?w=1000&q=80" alt="Jiboia exuberante e saudável em um vaso">
+      <div class="hero-note">
+        <b>16 anos</b>
+        <span>cultivando e vendendo plantas na Cheiro de Verde</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- DEPOIMENTOS -->
+<section class="testimonials">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Resultados de alunos</p>
+      <h2>Quem aplicou o método <em>viu a diferença</em></h2>
+    </div>
+    <div class="t-grid">
+      <article class="t-card reveal">
+        <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+        <blockquote>“Em poucos dias depois de aprender a cuidar melhor, elas se desenvolveram. Estão lindas — estou encantada como cresceram.”</blockquote>
+        <footer><strong>Débora F.</strong><span>Aluna do Método Jiboia 7D</span></footer>
+      </article>
+      <article class="t-card reveal">
+        <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+        <blockquote>“Cuidar das plantas se tornou um momento de prazer e alegria. Estou amando minhas jiboias em cima da TV.”</blockquote>
+        <footer><strong>Andréia P.</strong><span>Aluna do Método Jiboia 7D</span></footer>
+      </article>
+      <article class="t-card reveal">
+        <div class="stars"><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg><svg><use href="#i-star"/></svg></div>
+        <blockquote>“Estava matando afogada e de fome. Agora, com a rega correta, não perdi mais nenhuma jiboia.”</blockquote>
+        <footer><strong>Eliana S.</strong><span>Aluna do Método Jiboia 7D</span></footer>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEMA x SOLUÇÃO -->
+<section>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Por que este método existe</p>
+      <h2>Chega de juntar respostas soltas do <em>Google e do YouTube</em></h2>
+      <p class="lead">Cada fonte diz uma coisa. O Jiboia 7D reúne o que realmente funciona em um sistema único, testado em 16 anos de loja e escola.</p>
+    </div>
+    <div class="compare reveal">
+      <div class="is-no">
+        <h3>Sem um método</h3>
+        <ul class="check-list">
+          <li><svg class="icon"><use href="#i-x"/></svg>Folhas murchando sem explicação</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Rega no chute — de mais ou de menos</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Dinheiro gasto repondo plantas</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Horas perdidas em pesquisas que se contradizem</li>
+        </ul>
+      </div>
+      <div class="is-yes">
+        <h3>Com o Jiboia 7D</h3>
+        <ul class="check-list">
+          <li><svg class="icon"><use href="#i-check"/></svg>Jiboia densa, verde e crescendo</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Rotina de rega certa para o seu clima e vaso</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Novas mudas a partir da sua planta, sem custo</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Segurança no cuidado, em 5 minutos por semana</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM É -->
+<section class="fit">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Antes de comprar</p>
+      <h2>Este método é <em>para você?</em></h2>
+    </div>
+    <div class="fit-grid">
+      <div class="is-yes reveal">
+        <h3>É para você se…</h3>
+        <ul class="check-list">
+          <li><svg class="icon"><use href="#i-check"/></svg>Já perdeu pelo menos uma jiboia e não quer que aconteça de novo.</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Quer a sala bonita de verdade — e não só por uma semana.</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Não tem tempo para pesquisar e prefere um guia direto e testado.</li>
+          <li><svg class="icon"><use href="#i-check"/></svg>Quer que cuidar de planta seja um hobby, não uma fonte de estresse.</li>
+        </ul>
+      </div>
+      <div class="is-no reveal">
+        <h3>Não é para você se…</h3>
+        <ul class="check-list">
+          <li><svg class="icon"><use href="#i-x"/></svg>Não quer dedicar nem 5 minutos por semana à planta.</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Já domina rega, luz, adubação e propagação sem nenhuma dúvida.</li>
+          <li><svg class="icon"><use href="#i-x"/></svg>Procura um curso acadêmico, cheio de termos científicos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--
+  PRÉVIA EM VÍDEO — desativada até existir o vídeo.
+  Para ativar: troque SEU_VIDEO_ID pelo ID do YouTube e remova o atributo "hidden".
+-->
+<section hidden>
+  <div class="wrap" style="max-width:860px">
+    <div class="sec-head">
+      <p class="eyebrow">Veja antes de comprar</p>
+      <h2>Prévia gratuita: o <em>Protocolo de Rega</em></h2>
+    </div>
+    <div style="aspect-ratio:16/9;border-radius:16px;overflow:hidden">
+      <iframe src="https://www.youtube.com/embed/SEU_VIDEO_ID" title="Prévia do Método Jiboia 7D" style="width:100%;height:100%;border:0" allowfullscreen loading="lazy"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- OS 7 PASSOS -->
+<section>
+  <div class="wrap steps-layout">
+    <div class="sec-head reveal">
+      <p class="eyebrow">O que você vai aprender</p>
+      <h2>7 passos, <em>na ordem certa</em></h2>
+      <p class="lead">Não são dicas soltas. Cada passo prepara o próximo — e cada um resolve um problema concreto da sua jiboia.</p>
+      <a href="#oferta" class="btn">Ver a oferta <svg><use href="#i-arrow"/></svg></a>
+    </div>
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step-n">01</span>
+        <div>
+          <h3>Desbloqueando a jiboia</h3>
+          <p class="step-result">Da dúvida à certeza</p>
+          <p>Entenda como a planta funciona e acabe com o “o que estou fazendo errado?”.</p>
+        </div>
+      </li>
+      <li class="step reveal">
+        <span class="step-n">02</span>
+        <div>
+          <h3>Protocolo Zero Erro de Rega</h3>
+          <p class="step-result">Fim da frustração com água</p>
+          <p>Saiba exatamente quando regar, em qualquer clima e qualquer vaso. É o erro número 1 — e o que menos se explica direito por aí.</p>
+        </div>
+      </li>
+      <li class="step reveal">
+        <span class="step-n">03</span>
+        <div>
+          <h3>A luz certa, sem medo de sol</h3>
+          <p class="step-result">Ambiente otimizado</p>
+          <p>Encontre o cantinho ideal da sua casa: sem queimar folhas e sem a planta perder cor por falta de luz.</p>
+        </div>
+      </li>
+      <li class="step reveal">
+        <span class="step-n">04</span>
+        <div>
+          <h3>Substrato e adubação</h3>
+          <p class="step-result">Crescimento visível</p>
+          <p>Terra certa e nutrição na medida para ver a jiboia crescer em semanas — nem faminta, nem encharcada.</p>
+        </div>
+      </li>
+      <li class="step reveal">
+        <span class="step-n">05</span>
+        <div>
+          <h3>Multiplicando sua jiboia</h3>
+          <p class="step-result">Várias plantas pelo preço de uma</p>
+          <p>Faça novas mudas a partir dos galhos para presentear, decorar outros cômodos ou deixar o vaso mais cheio.</p>
+        </div>
+      </li>
+      <li class="step reveal">
+        <span class="step-n">06</span>
+        <div>
+          <h3>Diagnóstico SOS</h3>
+          <p class="step-result">Você no comando da saúde da planta</p>
+          <p>Manchas, folhas amarelas, pragas: identifique a causa e resolva sem pânico.</p>
+        </div>
+      </li>
+      <li class="step reveal">
+        <span class="step-n">07</span>
+        <div>
+          <h3>Decoração e rotina</h3>
+          <p class="step-result">5 minutos por semana</p>
+          <p>Transforme o cuidado em um ritual semanal rápido — e deixe a jiboia valorizando a sua casa.</p>
+        </div>
+      </li>
+      <li class="step bonus reveal">
+        <span class="step-n">+</span>
+        <div>
+          <h3>Variedades e confusões comuns</h3>
+          <p class="step-result">Aula bônus</p>
+          <p>Neon, Marble, Golden… entenda as diferenças e nunca mais confunda sua jiboia com outra espécie na hora de comprar.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- QUEM SOMOS -->
+<section class="about">
+  <div class="wrap about-grid">
+    <div class="reveal">
+      <div class="about-photo">
+        <img src="https://escolacheirodeverde.com.br/wp-content/uploads/2025/11/METODO-JIBOIA-7D.png" alt="Thaís e Fábio, engenheiros agrônomos e criadores do Método Jiboia 7D">
+      </div>
+      <p class="about-photo-cap">Thaís e Fábio, criadores do método</p>
+    </div>
+    <div class="reveal">
+      <p class="eyebrow">Quem está por trás</p>
+      <h2>Ciência de agrônomo, <em>linguagem de quem cuida</em> de planta em casa</h2>
+      <p>A Cheiro de Verde é uma loja e escola de plantas fundada em 2010. Desde então, ajudamos milhares de pessoas a manter plantas saudáveis dentro de casa.</p>
+      <p>O Método Jiboia 7D foi desenvolvido por Thaís e Fábio, engenheiros agrônomos com mestrado e doutorado em Agricultura Tropical e Subtropical, a partir do que vimos funcionar — e falhar — com centenas de alunos.</p>
+      <div class="creds">
+        <div><b>2010</b><span>Loja e escola própria</span></div>
+        <div><b>16 anos</b><span>de experiência com plantas</span></div>
+        <div><b>Mestrado</b><span>Agricultura Tropical e Subtropical</span></div>
+        <div><b>Doutorado</b><span>Engenheiros agrônomos</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OFERTA -->
+<section class="offer" id="oferta">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <p class="eyebrow">Oferta</p>
+      <h2>Tudo o que você recebe</h2>
+      <p class="lead">Curso completo, materiais de apoio e acompanhamento — em um pagamento único.</p>
+    </div>
+
+    <div class="offer-card reveal">
+      <div class="includes">
+        <h3>Incluso no Método Jiboia 7D</h3>
+        <ul class="inc-list">
+          <li>
+            <span class="inc-name"><svg class="icon"><use href="#i-check"/></svg><span><b>Curso completo em 7 passos + aula bônus</b><small>Aulas gravadas, acesso vitalício e atualizações futuras</small></span></span>
+          </li>
+          <li>
+            <span class="inc-name"><svg class="icon"><use href="#i-check"/></svg><span><b>90 dias de Comunidade Jiboia 7D</b><small>Tire dúvidas com especialistas e compartilhe resultados</small></span></span>
+            <span class="val">R$ 149,00</span>
+          </li>
+          <li>
+            <span class="inc-name"><svg class="icon"><use href="#i-check"/></svg><span><b>Guia de adubação de bolso</b><small>Imprimível, com espaço para anotar as datas</small></span></span>
+            <span class="val">R$ 39,00</span>
+          </li>
+          <li>
+            <span class="inc-name"><svg class="icon"><use href="#i-check"/></svg><span><b>Checklist de rega</b><small>O que fazer a cada semana, sem esquecer</small></span></span>
+            <span class="val">R$ 29,00</span>
+          </li>
+        </ul>
+      </div>
+      <div class="price">
+        <p class="price-from">Valor total <s>R$ 246,90</s></p>
+        <div class="price-big"><span class="cur">R$</span><span class="num">47</span><span class="dec">,90</span></div>
+        <p class="price-sub">Pagamento único · acesso imediato</p>
+        <a href="https://pay.hotmart.com/C102656253U" class="btn btn-block">Quero o Método Jiboia 7D</a>
+        <p class="cashback"><b>Bônus de R$ 47,90 em crédito</b> na loja Cheiro de Verde, enviado no 8º dia após a compra. Válido por 30 dias em compras acima de R$ 299,90.</p>
+      </div>
+    </div>
+
+    <div class="guarantee reveal">
+      <div class="seal"><b>7</b><span>dias</span></div>
+      <div>
+        <h3>Garantia incondicional de 7 dias</h3>
+        <p>Acesse o curso, aplique o método e, se não gostar por qualquer motivo, devolvemos 100% do valor. Sem perguntas e sem burocracia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ + CONTATO -->
+<section>
+  <div class="wrap faq-grid">
+    <div>
+      <div class="sec-head reveal" style="margin-bottom:32px">
+        <p class="eyebrow">Dúvidas frequentes</p>
+        <h2>Perguntas <em>comuns</em></h2>
+      </div>
+      <details>
+        <summary>O que está incluso no curso?<svg class="icon"><use href="#i-plus"/></svg></summary>
+        <p>Acesso vitalício às aulas dos 7 passos e à aula bônus, materiais de apoio, checklist de rega, guia de adubação de bolso, 90 dias de comunidade e todas as atualizações futuras. Tudo liberado logo após a confirmação da compra.</p>
+      </details>
+      <details>
+        <summary>Em quanto tempo terei acesso?<svg class="icon"><use href="#i-plus"/></svg></summary>
+        <p>O acesso é imediato. Após a confirmação do pagamento, você recebe o e-mail de acesso e já pode começar.</p>
+      </details>
+      <details>
+        <summary>Como funciona a garantia de 7 dias?<svg class="icon"><use href="#i-plus"/></svg></summary>
+        <p>Você tem 7 dias para acessar o curso e aplicar o método. Se por qualquer motivo não ficar satisfeito, devolvemos 100% do valor, sem burocracia.</p>
+      </details>
+      <details>
+        <summary>Como funciona o crédito de R$ 47,90?<svg class="icon"><use href="#i-plus"/></svg></summary>
+        <p>No 8º dia após a confirmação da compra, você recebe por e-mail um crédito de R$ 47,90 para usar no site cheirodeverde.com. Ele é válido por 30 dias, em compras acima de R$ 299,90.</p>
+      </details>
+      <details>
+        <summary>Preciso ter experiência com plantas?<svg class="icon"><use href="#i-plus"/></svg></summary>
+        <p>Não. O método foi criado para quem está começando — ou para quem já tentou e não conseguiu. Os passos são simples e práticos.</p>
+      </details>
+      <details>
+        <summary>Tem suporte em caso de dúvidas?<svg class="icon"><use href="#i-plus"/></svg></summary>
+        <p>Sim. Suporte técnico por e-mail por 30 dias após a compra e, para dúvidas de conteúdo, 90 dias de acesso à comunidade com especialistas.</p>
+      </details>
+      <details>
+        <summary>O preço pode aumentar?<svg class="icon"><use href="#i-plus"/></svg></summary>
+        <p>Este é o preço de lançamento do método. Não há data definida para reajuste, mas ele pode acontecer a qualquer momento.</p>
+      </details>
+    </div>
+
+    <aside class="contact reveal">
+      <div class="contact-who">
+        <img src="https://escolacheirodeverde.com.br/wp-content/uploads/2025/10/1-240x300.png" alt="Thaís, engenheira agrônoma">
+        <div><b>Thaís</b><span>Eng. agrônoma · criadora do método</span></div>
+      </div>
+      <p>Ficou com alguma dúvida? Fale direto comigo pelo WhatsApp — sem robô e sem atendente genérico.</p>
+      <a href="https://wa.me/5519996805599?text=Ol%C3%A1%2C%20tenho%20d%C3%BAvidas%20sobre%20o%20curso%20Jiboia%207D%2C%20pode%20me%20ajudar%3F" class="btn btn-wa" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg>Conversar no WhatsApp</a>
+    </aside>
+  </div>
+</section>
+
+<!-- FECHAMENTO -->
+<section class="final">
+  <div class="wrap reveal">
+    <h2>Sua próxima jiboia não precisa ter o mesmo fim. <em>Comece hoje.</em></h2>
+    <a href="https://pay.hotmart.com/C102656253U" class="btn">Garantir acesso por R$ 47,90 <svg><use href="#i-arrow"/></svg></a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <p>Cheiro de Verde · Loja e escola de plantas desde 2010 · CNPJ 42.120.315/0001-12</p>
+    <p>© 2026 · <a href="https://escolacheirodeverde.com.br/privacy-policy/">Política de Privacidade</a></p>
+  </div>
+</footer>
+
+<div class="mobile-bar" id="mobileBar">
+  <div><b>R$ 47,90</b><span>Garantia de 7 dias</span></div>
+  <a href="https://pay.hotmart.com/C102656253U" class="btn">Garantir acesso</a>
+</div>
+
+<script>
+  // Borda no menu ao rolar e barra mobile só depois do hero
+  var nav = document.getElementById('nav');
+  var bar = document.getElementById('mobileBar');
+  var hero = document.querySelector('.hero');
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 8);
+    bar.classList.toggle('show', window.scrollY > hero.offsetHeight - 200);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Entrada suave das seções
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { rootMargin: '0px 0px -10% 0px' });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+</script>
+</body>
+</html>
